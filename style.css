@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #494149;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+.container {
+  background-color: #14bdac;
+  margin: 40px;
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.title span {
+  color: whitesmoke;
+}
+
+.status-action {
+  display: flex;
+  margin-top: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  justify-content: space-around;
+}
+
+.reset {
+  cursor: pointer;
+  top: 20px;
+}
+
+.reset:hover {
+  color: whitesmoke;
+}
+
+.game-grid {
+  background: #0b9789;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 80px;
+}
+
+.game-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bol;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  background: #14bdac;
+}
+
+.x::after {
+  content: "X";
+  font-size: 70px;
+}
+
+.o::after {
+  content: "O";
+  color: whitesmoke;
+  font-size: 70px;
+}
+
+.o-won {
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 500px) {
+  .game-grid {
+    grid-gap: 5px;
+    margin-top: 40px;
+  }
+  .game-cell {
+    height: 60px;
+    width: 60px;
+  }
+  .x::after {
+    font-size: 35px;
+  }
+  .o::after {
+    font-size: 35px;
+  }
+  .status-action {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .game-grid {
+    grid-gap: 4px;
+    margin-top: 35px;
+  }
+  .game-cell {
+    height: 50px;
+    width: 50px;
+  }
+  .x::after {
+    font-size: 30px;
+  }
+  .o::after {
+    font-size: 30px;
+  }
+  .status-action {
+    font-size: 15px;
+  }
+  .container {
+    padding: 30px;
+  }
+}
+
+.btn {
+  background-color: #0b9789; /* Green */
+  border: none;
+  color: whitesmoke;
+  padding: 8px 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #0b9789;
+  background-color: whitesmoke;
+}
