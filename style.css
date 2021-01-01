@@ -145,4 +145,10 @@ body {
   .container {
     padding: 30px;
   }
+  .btn {
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 3px;
+  }
 }
